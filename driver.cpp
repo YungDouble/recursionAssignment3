@@ -4,73 +4,70 @@
 int factorial(int n) {
     // Base case: factorial of 0 is 1
     if (n == 0 || n == 1) {
-        return 1;
+        //Base case
     } else {
         // Recursive case: n! = n * (n-1)!
-        return n * factorial(n - 1);
     }
 }
 
 // Function to print elements of an array in reverse order using recursion
 void printReverse(int arr[], int size) {
-    // Base case: if the array is empty, return
+    
     if (size == 0) {
-        return;
+        // Base case: if the array is empty, return
     } else {
         // Print the last element
-        std::cout << arr[size - 1] << " ";
 
         // Recursive case: print the remaining elements in reverse order
-        printReverse(arr, size - 1);
+
     }
 }
 
 // Function to calculate the nth Fibonacci number using recursion
 int fibonacci(int n) {
-    // Base case: Fibonacci of 0 is 0, and Fibonacci of 1 is 1
+    
     if (n == 0) {
-        return 0;
+        // Base case: Fibonacci of 0 is 0, and Fibonacci of 1 is 1
     } else if (n == 1) {
-        return 1;
+        // Special Case
     } else {
-        // Recursive case: Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        // Recursive case:
     }
 }
 
 // Function to find the sum of elements in an array using recursion
 int arraySum(int arr[], int size) {
-    // Base case: if the array is empty, return 0
+    
     if (size == 0) {
-        return 0;
+        // Base case: 
     } else {
-        // Recursive case: sum = current element + sum of remaining elements
-        return arr[size - 1] + arraySum(arr, size - 1);
+        // Recursive case: 
+
     }
 }
 
 // Function to calculate the power of a number using recursion
 int power(int base, int exponent) {
-    // Base case: any number to the power of 0 is 1
+    
     if (exponent == 0) {
-        return 1;
+        // Base case:
+
     } else {
-        // Recursive case: base^exponent = base * base^(exponent-1)
-        return base * power(base, exponent - 1);
+        // Recursive case: 
+
     }
 }
 
 // Function to reverse a string using recursion
 void reverseString(std::string& str, int start, int end) {
-    // Base case: if the start index crosses the end index, return
+    
     if (start >= end) {
-        return;
+        // Base case:
     } else {
         // Swap characters at start and end indices
-        std::swap(str[start], str[end]);
 
-        // Recursive case: reverse the substring between start and end indices
-        reverseString(str, start + 1, end - 1);
+        // Recursive case:
+        
     }
 }
 
