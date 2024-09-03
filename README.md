@@ -1,7 +1,7 @@
 # Program 3 - Recursion & Set ADT
 
 # Introduction
-This assignment will have 2 parts. In the first part, you will implement and test a function that processes the elements of an array using recursion. In the second part, you will implement a set class template using an array.
+Complete this assignment by filling in the blank and making it work. Please do not use ChatGPT
 
 # Run the app
 
