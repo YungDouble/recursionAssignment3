@@ -4,22 +4,19 @@
 int factorial(int n) {
     // Base case: factorial of 0 is 1
     if (n == 0 || n == 1) {
-        //Base case
+        return 1;    // Base Case
     } else {
-        // Recursive case: n! = n * (n-1)!
+        return n * factorial(n - 1);    // Recursive case, definition of factorial
     }
 }
 
 // Function to print elements of an array in reverse order using recursion
 void printReverse(int arr[], int size) {
-    
     if (size == 0) {
-        // Base case: if the array is empty, return
+        return;    // Base case
     } else {
-        // Print the last element
-
-        // Recursive case: print the remaining elements in reverse order
-
+        std::cout << arr[size - 1] << " ";    // Print last element
+        printReverse(arr, size - 1);          // Recursive call
     }
 }
 
@@ -27,11 +24,11 @@ void printReverse(int arr[], int size) {
 int fibonacci(int n) {
     
     if (n == 0) {
-        // Base case: Fibonacci of 0 is 0, and Fibonacci of 1 is 1
+        return 0;    // Base case
     } else if (n == 1) {
-        // Special Case
+        return 1;
     } else {
-        // Recursive case:
+        return fibonacci(n -1) + fibonacci(n - 2);    // Recursive step
     }
 }
 
@@ -39,10 +36,9 @@ int fibonacci(int n) {
 int arraySum(int arr[], int size) {
     
     if (size == 0) {
-        // Base case: 
+        return 0;    // This is the base case, there are no elements to sum
     } else {
-        // Recursive case: 
-
+        return arr[size -1] + arraySum(arr, size - 1);
     }
 }
 
@@ -50,11 +46,10 @@ int arraySum(int arr[], int size) {
 int power(int base, int exponent) {
     
     if (exponent == 0) {
-        // Base case:
+        return 1;    // Base case is always one by law of exponents
 
     } else {
-        // Recursive case: 
-
+        return base * power(base, exponent - 1);
     }
 }
 
@@ -62,12 +57,14 @@ int power(int base, int exponent) {
 void reverseString(std::string& str, int start, int end) {
     
     if (start >= end) {
-        // Base case:
+        return;    // No more characters to swap
     } else {
-        // Swap characters at start and end indices
+        // Manually swap characters
+        char temp = str[start];    // Save the star character in a temp var
+        str[start] = str[end];     // Set the start char equal to the end char
+        str[end] = temp;           //  Set the end char to the temp var
 
-        // Recursive case:
-        
+        reverString(str, start + 1, end - 1);
     }
 }
 
